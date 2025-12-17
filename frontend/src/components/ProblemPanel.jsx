@@ -97,7 +97,7 @@ function ProblemPanel() {
       const fetchProblem = async () => {
         try {
           const { data } = await axiosClient.get(
-            `/problems/problemByID/${id}`
+            `/api/v1/problems/problemByID/${id}`
           );
           const problem = data.data.problemRequested;
 

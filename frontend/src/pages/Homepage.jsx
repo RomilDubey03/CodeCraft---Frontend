@@ -19,7 +19,7 @@ function Homepage() {
     const fetchProblems = async () => {
       try {
         const { data } = await axiosClient.get(
-          "/problems/getAllProblems"
+          "/api/v1/problems/getAllProblems"
         );
         setProblems(data.data.allProblems);
       } catch (error) {
@@ -30,7 +30,7 @@ function Homepage() {
     const fetchSolvedProblems = async () => {
       try {
         const { data } = await axiosClient.get(
-          "/problems/getAllProblemsSolvedByUser"
+          "/api/v1/problems/getAllProblemsSolvedByUser"
         );
         setSolvedProblems(data.data.problemsSolved);
       } catch (error) {

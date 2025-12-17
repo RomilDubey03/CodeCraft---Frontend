@@ -14,7 +14,7 @@ const AdminUpdate = () => {
             try {
                 setLoading(true);
                 const { data } = await axiosClient.get(
-                    "/problems/getAllProblems"
+                    "api/v1/problems/getAllProblems"
                 );
                 setProblems(data.data.allProblems);
             } catch (err) {
@@ -173,12 +173,12 @@ const AdminUpdate = () => {
                                     <div className="col-span-2">
                                         <span
                                             className={`px-2 py-1 rounded text-xs font-medium ${problem.difficulty?.toLowerCase() ===
-                                                    "easy"
-                                                    ? "bg-green-50 text-green-700 border border-green-100"
-                                                    : problem.difficulty?.toLowerCase() ===
-                                                        "medium"
-                                                        ? "bg-yellow-50 text-yellow-700 border border-yellow-100"
-                                                        : "bg-red-50 text-red-700 border border-red-100"
+                                                "easy"
+                                                ? "bg-green-50 text-green-700 border border-green-100"
+                                                : problem.difficulty?.toLowerCase() ===
+                                                    "medium"
+                                                    ? "bg-yellow-50 text-yellow-700 border border-yellow-100"
+                                                    : "bg-red-50 text-red-700 border border-red-100"
                                                 }`}
                                         >
                                             {problem.difficulty}

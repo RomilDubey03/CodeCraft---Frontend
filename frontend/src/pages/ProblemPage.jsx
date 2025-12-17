@@ -32,7 +32,7 @@ const ProblemPage = () => {
       setLoading(true);
       try {
         const response = await axiosClient.get(
-          `/problems/problemByID/${problemId}`
+          `/api/v1/problems/problemByID/${problemId}`
         );
 
         const problemData = response.data.data.problemRequested;
@@ -80,7 +80,7 @@ const ProblemPage = () => {
 
     try {
       const response = await axiosClient.post(
-        `/submissions/run/${problemId}`,
+        `/api/v1/submissions/run/${problemId}`,
         {
           code,
           language: selectedLanguage
@@ -107,7 +107,7 @@ const ProblemPage = () => {
 
     try {
       const response = await axiosClient.post(
-        `/submissions/submit/${problemId}`,
+        `/api/v1/submissions/submit/${problemId}`,
         {
           code: code,
           language: selectedLanguage
