@@ -14,7 +14,7 @@ const AdminUpdate = () => {
             try {
                 setLoading(true);
                 const { data } = await axiosClient.get(
-                    "api/v1/problems/getAllProblems"
+                    "/api/v1/problems/getAllProblems"
                 );
                 setProblems(data.data.allProblems);
             } catch (err) {
