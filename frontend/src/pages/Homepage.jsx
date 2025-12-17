@@ -82,14 +82,14 @@ function Homepage() {
               <div className="flex items-center gap-3">
                 <div className="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center">
                   <span className="font-semibold text-gray-700">
-                    {user?.firstName
+                    {user?.fullName
                       ?.charAt(0)
                       .toUpperCase()}
                   </span>
                 </div>
                 <div className="hidden md:block">
                   <p className="text-sm font-medium text-gray-900">
-                    {user?.firstName} {user?.lastName}
+                    {user?.fullName}
                   </p>
                   <p className="text-xs text-gray-500">
                     {user?.email}

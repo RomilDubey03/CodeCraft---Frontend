@@ -10,7 +10,7 @@ const AdminDelete = () => {
     const fetchProblems = async () => {
       try {
         setLoading(true);
-        const { data } = await axiosClient.get("/problems/getAllProblems");
+        const { data } = await axiosClient.get("/api/v1/problems/getAllProblems");
         setProblems(data.data.allProblems);
       } catch (err) {
         setError("Failed to fetch problems");
