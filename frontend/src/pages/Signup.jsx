@@ -41,13 +41,13 @@ function Signup() {
     }
   }, [isAuthenticated]);
 
-  useEffect(() => {
-    if (error) {
-      toast.error(
-        typeof error === "string" ? error : "Registration failed"
-      );
-    }
-  }, [error]);
+  // useEffect(() => {
+  //   if (error) {
+  //     toast.error(
+  //       typeof error === "string" ? error : "Registration failed"
+  //     );
+  //   }
+  // }, [error]);
 
   const onSubmit = (data) => {
     dispatch(registerUser(data));
